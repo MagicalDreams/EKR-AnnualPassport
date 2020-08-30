@@ -84,7 +84,7 @@ public final class Main extends JavaPlugin {
 
             ItemStack attractions = new ItemStack(Material.MINECART);
             ItemMeta attractionsmeta = attractions.getItemMeta();
-            attractionsmeta.setDisplayName(ChatColor.YELLOW + "Attractions");
+            attractionsmeta.setDisplayName(ChatColor.YELLOW + "Attractions: EKR");
             attractions.setItemMeta(attractionsmeta);
 
             ItemStack Entertianment = new ItemStack((Material.FIREWORK_ROCKET));
@@ -113,6 +113,11 @@ public final class Main extends JavaPlugin {
             GSGMeta.setDisplayName(" ");
             GSG.setItemMeta(GSGMeta);
             
+            ItemStack placeholder = new ItemStack((Material.REDSTONE_BLOCK));
+            ItemMeta placeholderMeta = placeholder.getItemMeta();
+            placeholderMeta.setDisplayName(ChatColor.RED + "Placeholder!");
+            placeholder.setItemMeta(placeholderMeta);
+            
             
             MagicbandGUI.setItem(0, BSG);
             MagicbandGUI.setItem(1, BSG);
@@ -136,7 +141,8 @@ public final class Main extends JavaPlugin {
             MagicbandGUI.setItem(19, BSG);
             MagicbandGUI.setItem(20, BSG);
             MagicbandGUI.setItem(21, BSG);
-      //UNDOWN(HIDDEN MICKIE)      
+      //UNDOWN(HIDDEN MICKIE)  
+            MagicbandGUI.setItem(22, placeholder);
             MagicbandGUI.setItem(23, BSG);
             MagicbandGUI.setItem(24, BSG);
             MagicbandGUI.setItem(25, BSG);
@@ -522,9 +528,9 @@ public final class Main extends JavaPlugin {
             
         }
         
-        public static void applyattractionsDLRUI(Player player) {
+        public void applyattractionsEKRUI(Player player) {
         	
-            Inventory attractionsDLR = Bukkit.createInventory(null, 54, ChatColor.BLUE + "Attractions: NULL");
+            Inventory attractionsEKR = Bukkit.createInventory(null, 54, ChatColor.BLUE + "Attractions: EKR");
             
             ItemStack BSG = new ItemStack((Material.BLUE_STAINED_GLASS_PANE));
             ItemMeta BSGMeta = BSG.getItemMeta();
@@ -538,7 +544,7 @@ public final class Main extends JavaPlugin {
             
             ItemStack attractions = new ItemStack(Material.MINECART);
             ItemMeta attractionsmeta = attractions.getItemMeta();
-            attractionsmeta.setDisplayName(ChatColor.YELLOW + "Attractions");
+            attractionsmeta.setDisplayName(ChatColor.YELLOW + "Attractions: EKR");
             attractions.setItemMeta(attractionsmeta);
             
             ItemStack back = new ItemStack(Material.PAPER);
@@ -546,36 +552,36 @@ public final class Main extends JavaPlugin {
             backMeta.setDisplayName(ChatColor.GREEN + "<-- Back");
             back.setItemMeta(backMeta);
             
-            attractionsDLR.setItem(0, BSG);
-            attractionsDLR.setItem(1, BSG);
-            attractionsDLR.setItem(2, BSG);
-            attractionsDLR.setItem(3, BSG);
-            attractionsDLR.setItem(4, attractions);
-            attractionsDLR.setItem(5, BSG);
-            attractionsDLR.setItem(6, BSG);
-            attractionsDLR.setItem(7, BSG);
-            attractionsDLR.setItem(8, back);
+            attractionsEKR.setItem(0, BSG);
+            attractionsEKR.setItem(1, BSG);
+            attractionsEKR.setItem(2, BSG);
+            attractionsEKR.setItem(3, BSG);
+            attractionsEKR.setItem(4, attractions);
+            attractionsEKR.setItem(5, BSG);
+            attractionsEKR.setItem(6, BSG);
+            attractionsEKR.setItem(7, BSG);
+            attractionsEKR.setItem(8, back);
             
-            attractionsDLR.setItem(9, BSG);
-            attractionsDLR.setItem(18, BSG);
-            attractionsDLR.setItem(27, BSG);
-            attractionsDLR.setItem(36, BSG);
-            attractionsDLR.setItem(45, BSG);
-            attractionsDLR.setItem(46, BSG);
-            attractionsDLR.setItem(47, BSG);
-            attractionsDLR.setItem(48, BSG);
-            attractionsDLR.setItem(49, BSG);
-            attractionsDLR.setItem(50, BSG);
-            attractionsDLR.setItem(51, BSG);
-            attractionsDLR.setItem(52, BSG);
-            attractionsDLR.setItem(53, BSG);
-            attractionsDLR.setItem(44, BSG);
-            attractionsDLR.setItem(35, BSG);
-            attractionsDLR.setItem(26, BSG);
-            attractionsDLR.setItem(17, BSG);
+            attractionsEKR.setItem(9, BSG);
+            attractionsEKR.setItem(18, BSG);
+            attractionsEKR.setItem(27, BSG);
+            attractionsEKR.setItem(36, BSG);
+            attractionsEKR.setItem(45, BSG);
+            attractionsEKR.setItem(46, BSG);
+            attractionsEKR.setItem(47, BSG);
+            attractionsEKR.setItem(48, BSG);
+            attractionsEKR.setItem(49, BSG);
+            attractionsEKR.setItem(50, BSG);
+            attractionsEKR.setItem(51, BSG);
+            attractionsEKR.setItem(52, BSG);
+            attractionsEKR.setItem(53, BSG);
+            attractionsEKR.setItem(44, BSG);
+            attractionsEKR.setItem(35, BSG);
+            attractionsEKR.setItem(26, BSG);
+            attractionsEKR.setItem(17, BSG);
 
             
-            player.openInventory(attractionsDLR);
+            player.openInventory(attractionsEKR);
 
 }
         

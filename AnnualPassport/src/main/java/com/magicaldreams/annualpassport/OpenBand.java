@@ -50,7 +50,7 @@ public class OpenBand implements Listener {
 
         JoinMB.setItemMeta(JoinMBMeta);
 
-        player.getInventory().setItem(0, JoinMB);
+        player.getInventory().setItem(8, JoinMB);
 
 
     }
@@ -111,7 +111,7 @@ public class OpenBand implements Listener {
 
                         break;
                     case MINECART:
-                    				
+                    	main.applyattractionsEKRUI((Player) player);			
                     	
                     	break;
                     case FIREWORK_ROCKET:
@@ -234,6 +234,33 @@ public class OpenBand implements Listener {
                 }
     	
     }
+    
+    @SuppressWarnings("deprecation")
+    @EventHandler
+    public void AtractionsEKRClick(InventoryClickEvent e) {
+    	
+    	Player player = (Player) e.getWhoClicked();
+    	
+    	if( e.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "Attractions: EKR")) {
+    		
+    		 if(e.getCurrentItem() != null) {
+                 e.setCancelled(true);
+                 switch (e.getCurrentItem().getType()) {
+                 
+                 case PAPER:
+                	 Main.applyMagicBandUI((Player) player);
+                 
+                 break;
+                default:
+                	return;
+                 
+
+                 }
+                 }
+    		
+    	}
+    	
+    }
 
     @EventHandler
     public void ParksonClick(InventoryClickEvent e) {
@@ -297,30 +324,7 @@ public class OpenBand implements Listener {
 
     }
       
-    
-    @EventHandler
-    public void AttractionsDLRClick(InventoryClickEvent e) {
-
-
-
-        Player player = (Player) e.getWhoClicked();
-
-
-        if( e.getView().getTitle().equalsIgnoreCase(ChatColor.BLUE + "Attractions: NULL")) {
-
-            if(e.getCurrentItem() != null) {
-                e.setCancelled(true);
-                switch (e.getCurrentItem().getType()) {
-                case PAPER:
-                    Main.applyMagicBandUI((Player) player);
-                	
-                    break;
-                default:
-                    return;
-                }
-            }
-        }
-    }
+   
                 
 
 
