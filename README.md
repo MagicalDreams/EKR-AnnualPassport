@@ -1,5 +1,5 @@
-# MagicBand-Menu
-MagicBand Menu for the Minecraft server: Magical Dreams
+# EKR-Annual Passport
+Annual Passport for the Minecraft server: Magical Dreams
 
 name: MagicalDreams-AnnualPassportMenu<br/>
 version: 0.10.2<br/>
